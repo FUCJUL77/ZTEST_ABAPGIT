@@ -19,7 +19,7 @@ CLASS zcl_test_abapgit IMPLEMENTATION.
       EXPORTING
         logical_filename = iv_logical_filename
       IMPORTING
-        file_name        = lv_file_name
+        file_name        = rv_file_name
       EXCEPTIONS
         file_not_found   = 1
         OTHERS           = 2.
@@ -27,6 +27,6 @@ CLASS zcl_test_abapgit IMPLEMENTATION.
       MESSAGE 'Invalid logical file name!' TYPE 'I'.
       RETURN.
     ENDIF.
-    rv_file_name = lv_file_name.
+
   ENDMETHOD.
 ENDCLASS.
