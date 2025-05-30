@@ -15,7 +15,7 @@ CLASS zcl_test_abapgit IMPLEMENTATION.
     DATA: lv_file_name TYPE string.
     CALL FUNCTION 'FILE_GET_NAME'
       EXPORTING
-        logical_filename = 'Test'
+        logical_filename = 'Test123456'
       IMPORTING
         file_name        = lv_file_name
       EXCEPTIONS
