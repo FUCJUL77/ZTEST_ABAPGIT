@@ -4,8 +4,6 @@ FINAL
 CREATE PUBLIC .
   PUBLIC SECTION.
     CLASS-METHODS get_file_name
-      IMPORTING
-        iv_logical_file_name TYPE fileintern
       RETURNING
         VALUE(rv_file_name) TYPE string .
   PROTECTED SECTION.
@@ -17,7 +15,7 @@ CLASS zcl_test_abapgit IMPLEMENTATION.
     DATA: lv_file_name TYPE string.
     CALL FUNCTION 'FILE_GET_NAME'
       EXPORTING
-        logical_filename = iv_logical_file_name
+        logical_filename = 'Test'
       IMPORTING
         file_name        = lv_file_name
       EXCEPTIONS
